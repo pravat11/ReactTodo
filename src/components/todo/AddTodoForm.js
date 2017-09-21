@@ -11,8 +11,9 @@ class AddTodoForm extends Component {
 
   render() {
     return (
-        <div>
+        <div className="form-elements">
           <textarea type="text" onChange={(e) => this.setState({todo: e.target.value})}/>
+          <button onClick={this.props.closeForm} className='cancel-button'>Cancel</button>
           <input className="submit-button" type="submit" onClick={() => this.props.addTodo(this.state.todo)}/>
         </div>
     );

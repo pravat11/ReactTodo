@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-import AddButton from './AddButton';
 import TodoTabs from './TodoTabs';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
@@ -56,12 +55,14 @@ class TodoContainer extends Component {
   render() {
     return (
         <div className="todo-container">
-          <AddButton toggleTodoForm={this.toggleTodoForm} isShowingTodoForm={this.state.isShowingTodoForm}/>
           {
             (this.state.isShowingTodoForm) ?
-                <AddTodoForm addTodo={this.addTodo}/>
+                <AddTodoForm addTodo={this.addTodo} closeForm={this.toggleTodoForm}/>
                 :
                 <div>
+                  <div className="button-wrapper">
+                    <button onClick={this.toggleTodoForm} className='add-button'>Add new todo</button>
+                  </div>
                   <TodoTabs
                       switchTab={this.switchTab}
                       selectedTab={this.state.visibilityFilter}/>

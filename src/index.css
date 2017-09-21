@@ -50,10 +50,6 @@ body {
   background-color: #00dd77;
 }
 
-.cancel-button {
-  background-color: #ff4500;
-}
-
 .todo-tabs {
   width: 31%;
   border: none;
@@ -132,11 +128,18 @@ textarea {
   margin: 0px auto;
 }
 
-.submit-button {
+.form-elements input,.form-elements button {
   margin: 10px;
   padding: 8px 40px;
   font-weight: bold;
   border: none;
   color: #fff;
+}
+
+.submit-button {
   background-color: #00dd77;
+}
+
+.cancel-button {
+  background-color: #ff4500;
 }
