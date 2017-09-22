@@ -21,10 +21,10 @@ class TodoContainer extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(this.props.todos !== nextProps.todos) {
+    if (this.props.todos !== nextProps.todos) {
       this.setState({todos: nextProps.todos});
     }
-    if(this.props.visibilityFilter !== nextProps.visibilityFilter) {
+    if (this.props.visibilityFilter !== nextProps.visibilityFilter) {
       this.setState({visibilityFilter: nextProps.visibilityFilter});
     }
   }
@@ -86,9 +86,9 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
- return {
-   actions: bindActionCreators(todoActions, dispatch)
- };
+  return {
+    actions: bindActionCreators(todoActions, dispatch)
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoContainer);

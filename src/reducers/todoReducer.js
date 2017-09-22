@@ -1,11 +1,11 @@
-const todos = (state =[], action) => {
+const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
-          ...state,
+        ...state,
         {
           id: Date.now(),
-          text:action.todoText,
+          text: action.todoText,
           completed: false
         }
       ];
@@ -16,12 +16,14 @@ const todos = (state =[], action) => {
           return todo;
         }
         return {
-            ...todo,
+          ...todo,
           completed: !todo.completed
         };
       });
     case 'REMOVE_TODO':
-      return state.filter(todo => {return todo.id !== action.todoId});
+      return state.filter(todo => {
+        return todo.id !== action.todoId
+      });
     default :
       return state;
   }
