@@ -150,7 +150,8 @@ textarea {
 
 @media (min-width: 768px) {
     .todo-container {
-        width: 60%;
+        width: 40%;
+        min-width: 600px;
     }
 
     .todo-text {
